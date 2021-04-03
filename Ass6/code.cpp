@@ -28,17 +28,32 @@ void sieve(){
         }
     }
 }
+bool diffDigits(int a,int b){
+    int diff = 0;
+    while(a>0){
+        int r1 = a%10;
+        int r2 = b%10;
+        diff+=(r1!=r2);
+        a/=10;
+        b/=10;
+    }
+    return (diff==1);
+}
 void makeGraph(){
     graph = vector<vector<int>>(maxn+1);
     for(int i=0;i<primes.size();++i){
         for(int j=i+1;j<primes.size();++j){
             int p1 = primes[i];
             int p2 = primes[j];
+            if(diffDigits(p1,p2)!=1){
+                continue;
+            }
             graph[p1].push_back(p2);
             graph[p2].push_back(p1);
         }
     }
 }
+
 int main(){
     sieve();
     makeGraph();
