@@ -12,7 +12,7 @@
 using namespace std;
 const int maxn = 100009;
 vector<int>primes;
-
+vector<vector<int>>graph;
 void sieve(){
     vector<bool>isPrime(maxn+1,1);
     for(int i=2;i*i<=maxn;++i){
@@ -28,8 +28,18 @@ void sieve(){
         }
     }
 }
-
+void makeGraph(){
+    graph = vector<vector<int>>(maxn+1);
+    for(int i=0;i<primes.size();++i){
+        for(int j=i+1;j<primes.size();++j){
+            int p1 = primes[i];
+            int p2 = primes[j];
+            graph[p1].push_back(p2);
+            graph[p2].push_back(p1);
+        }
+    }
+}
 int main(){
     sieve();
-    for(auto & x : primes)cout<<x<<" ";
+    makeGraph();
 }
