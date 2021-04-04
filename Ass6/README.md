@@ -84,9 +84,16 @@ We need three functions to solve this problem :-
 Therefore,  the  time  complexity  of  our  program  will  be : O( N(log(log(N))) +P^2)
 
 **Space Complexity**
+01. sieve() :  to store prime numbers up to N. it take  O(N) space.
+02. makeGraph() : to add edges in our graph. At max we will have P*(P-1)/2  edges. So storing N nodes and P^2 edges Which is  O(N + P^2) space.
+03. bfs : In bfs, our queue can have a maximum of P values at a time. So, It takes $O(P)$ time.
+
+Therefore, the space complexity of our program will be : O(N + P^2)\\
 
 ----
 
 ### References
 
-https://www.geeksforgeeks.org/shortest-path-reach-one-prime-changing-single-digit-time/
+01. https://en.wikipedia.org/wiki/Breadth-first_search 
+02. Cormen, Leiserson, Rivest, and Stein (2009). Introduction to Algorithms, 3rd edition.
+03. https://www.geeksforgeeks.org/shortest-path-reach-one-prime-changing-single-digit-time/
