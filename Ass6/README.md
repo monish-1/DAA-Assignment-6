@@ -76,6 +76,12 @@ Following is step by step approach of algorithm(s) used inour program :
 
 **Time Complexity**
 
+We need three functions to solve this problem :- 
+01. sieve() :  to  generate  prime  numbers  up  to  N.  it  take O( N(log(log(N))) )time.
+02. makeGraph() : to  add  edges  in  our  graph.  It  takes O(P^2)time.
+03. bfs : to find shortest distance between given two 4 digitprimes. It takes O( N+P^2 )time.
+
+Therefore,  the  time  complexity  of  our  program  will  be : O( N(log(log(N))) +P^2)
 
 **Space Complexity**
 
