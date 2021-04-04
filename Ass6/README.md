@@ -12,7 +12,7 @@ that we get after changing a digit is prime. For example, a solution is 1033, 17
 
 ```
 Download project
-git clone https://github.com/KantSurya/DAA-Assignment.git
+git clone https://github.com/KantSurya/DAA-Assignment-6.git
 ```
 Initialisation: 
 ```
@@ -23,22 +23,41 @@ cd DAA-Assignment/Assignement-06
 
 Sample Input and Output
 ```
-
-
-
 Input : 
-
+1373 8017
 
 Output : 
-
-
+Shortest Distance : 7
+Path
+1373 -> 1303-> 1301-> 3301-> 3001-> 3011-> 8011-> 8017
 ----------------------------
-
 ```
 **Test cases**
-
 ```
+Test Case 1 : 
+Input : 
+1373 8017
 
+Output : 
+Shortest Distance : 7
+Path
+1373 -> 1303-> 1301-> 3301-> 3001-> 3011-> 8011-> 8017
+-------------------------------------
+Test Case 2 : 
+Input : 
+1033 8179
+
+Output : 
+Shortest Distance : 6
+Path
+1033 -> 1031-> 1051-> 1151-> 1171-> 8171-> 8179
+-------------------------------------
+Test Case 3 : 
+Input : 
+1033 1033
+
+Output : 
+Shortest Distance : 0
 -------------------------------------
 ```
 
