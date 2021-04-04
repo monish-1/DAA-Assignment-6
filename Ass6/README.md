@@ -25,8 +25,14 @@ Sample Input and Output
 ```
 
 
+
+Input : 
+
+
 Output : 
 
+
+----------------------------
 
 ```
 **Test cases**
@@ -40,7 +46,9 @@ Output :
 
 ### Theory
 First We first find out all 4 digit prime numbers till 9999.
+
 Then using those numbers formed the graph using adjacency list.
+
 After forming the adjacency list, we used simple Breadth First Search to solve the problem.
 
 ---
