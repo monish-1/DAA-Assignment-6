@@ -64,11 +64,11 @@ Shortest Distance : 0
 ---
 
 ### Theory
-First We first find out all 4 digit prime numbers till 9999.
-
-Then using those numbers formed the graph using adjacency list.
-
-After forming the adjacency list, we used simple Breadth First Search to solve the problem.
+Following is step by step approach of algorithm(s) used inour program :
+01. Find  and  store  all  the  prime  numbers  of  4  digit  using Sieve of Eratosthenes
+02. Make a graph using those prime numbers. Vertex will bethe prime numbers and two primes u,v will have an edge if  they  can  be  converted  into  one  another  by  changinga  single  digit.  Ex.  1373  and  1303  will  have  an  edgeconnecting both the nodes in our graph.
+03. If we have to find the shortest distance between a and b, then  we  will  root  our  graph  at  node  a  and  initialize  itsdistance as 0.
+04. Then apply bfs on our graph to find the shortest distancebetween given two prime numbers. The relation used willbe distance[child] = distance[parent] + 1, where child andparent have a direct edge and parent has a height smallerthan child
 
 ---
 
