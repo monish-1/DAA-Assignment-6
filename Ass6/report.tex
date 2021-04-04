@@ -97,8 +97,9 @@ Following is step by step approach of algorithm(s) used in our program :
     \item If we have to find the shortest distance between a and b. Then we will root our graph at node a and initialize its distance as 0. 
     \item Then apply bfs on our graph to find the shortest distance between given two prime numbers. The relation used will be distance[child] = distance[parent] + 1, where child and parent have a direct edge and parent has a height smaller than child.
 \end{itemize}
-
-
+\section{Parallel Algorithm : }
+ \textbf{Dijkstra algorithm } to find shortest distance can be used to find the shortest distance. However we have chosen the optimal one for given problem statement, "bfs" to find the shortest distance because here the edges are not weighted and hence is the optimal one. If the edges have been weighted in some way, then we can use Dijkstra algorithm to find shorted distance.\\
+A slight modification can be done during creation of the graph, instead of creating adjacency list using vectors, we can create adjacency matrix. However we have preferred over the adjacency list because it is the optimal one with less space complexity.\\
 
 
 \section{Algorithm Analysis}
